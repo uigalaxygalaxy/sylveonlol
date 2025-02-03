@@ -20,6 +20,7 @@ export default async function handler(req, res) {
 
     // Read the raw body
     const rawBody = await buffer(req);
+    console.log('Raw body:', rawBody.toString()); // Log raw body for debugging
 
     let event;
 
