@@ -50,7 +50,7 @@ export default async function handler(req, res) {
         const currency = (session.currency).toUpperCase();
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: "uigalaxyandromeda@gmail.com",
+            to: customer.data.object.email,
             subject: 'THANKS FOR PURCHASING!!!! ヽ(>∀<☆)ノ',
             text: `THANKS FOR BUYING!!!! 
 
