@@ -50,13 +50,14 @@ export default async function handler(req, res) {
         const currency = (session.currency).toUpperCase();
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: session.customer_email,
+            to: session.receipt_email,
             subject: 'THANKS FOR PURCHASING!!!! ヽ(>∀<☆)ノ',
             text: `THANKS FOR BUYING!!!! 
 
             You have purchased our goods for ${session.amount_total / 100} ${currency}! 
 
-            Your goods will be shipped to: asd!
+            Your goods will be shipped to: ${shipping.address.line1} ${shipping.address.line2}, ${shipping.address.postal_code}  ${shipping.address.state} ${shipping.address.country}!
+
 
             We will give you your shipping number once we get to your order!
             
