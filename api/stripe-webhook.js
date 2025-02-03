@@ -56,7 +56,7 @@ export default async function handler(req, res) {
 
             You have purchased our goods for ${session.amount_total / 100} ${currency}! 
 
-            Your goods will be shipped to: ${session.shipping.address}!
+            Your goods will be shipped to:!
 
 
             We will give you your shipping number once we get to your order!
