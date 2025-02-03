@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     if (event.type === 'checkout.session.completed') {
         const session = event.data.object;
 
-        const customerEmail = session.customer_details.email;
+        const customerEmail = session.customer_email;
         const amountTotal = session.amount_total / 100; // Convert to dollars
         const currency = session.currency;
 
