@@ -3,6 +3,7 @@ import { buffer } from 'micro';
 import nodemailer from 'nodemailer';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const discount = process.env.DISCOUNT;
 
 export const config = {
     api: {
@@ -46,11 +47,18 @@ export default async function handler(req, res) {
             },
         });
 
+        const currency = (session.currency).toUpperCase();
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: "uigalaxyandromeda@gmail.com",
-            subject: 'Your Purchase Receipt',
-            text: `Thank you for your purchase! Amount: ${session.amount_total / 100} ${session.currency}.`,
+            subject: 'THANKS FOR PURCHASING!!!! ヽ(>∀<☆)ノ',
+            text: `THANKS FOR BUYING!!!! 
+
+            You have purchased our goods for ${session.amount_total / 100} ${currency}! 
+            
+            We will send you your shipping # once we get around to your order!
+            
+            Thanks for the support!~ (ﾉ*ФωФ)ﾉ`,
         };
 
         try {
