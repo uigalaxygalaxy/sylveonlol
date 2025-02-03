@@ -1,14 +1,14 @@
 import Stripe from 'stripe';
+import { buffer } from 'micro';
 import nodemailer from 'nodemailer';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-const transporter = nodemailer.createTransport({
-    service: 'gmail', // or your email service
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+
+export const config = {
+    api: {
+        bodyParser: false, // Disable default body parsing
     },
-});
+};
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -18,27 +18,36 @@ export default async function handler(req, res) {
     const sig = req.headers['stripe-signature'];
     const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
+    // Read the raw body
+    const rawBody = await buffer(req);
+
     let event;
 
     try {
-        event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+        event = stripe.webhooks.constructEvent(rawBody, sig, endpointSecret);
     } catch (err) {
         console.error(`Webhook Error: ${err.message}`);
         return res.status(400).send(`Webhook Error: ${err.message}`);
     }
 
+    // Handle the event
     if (event.type === 'checkout.session.completed') {
         const session = event.data.object;
 
-        const customerEmail = session.customer_email;
-        const amountTotal = session.amount_total / 100; // Convert to dollars
-        const currency = session.currency;
+        // Send email receipt
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
+        });
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: customerEmail,
+            to: session.customer_details.email,
             subject: 'Your Purchase Receipt',
-            text: `Thank you for your purchase! Amount: ${amountTotal} ${currency}.`,
+            text: `Thank you for your purchase! Amount: ${session.amount_total / 100} ${session.currency}.`,
         };
 
         try {
@@ -51,9 +60,3 @@ export default async function handler(req, res) {
 
     res.json({ received: true });
 }
-
-export const config = {
-    api: {
-        bodyParser: false, // Disable default body parsing to handle raw body for Stripe
-    },
-};
