@@ -45,7 +45,7 @@ export default async function handler(req, res) {
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: session.customer_details.email,
+            to: "uigalaxyandromeda@gmail.com",
             subject: 'Your Purchase Receipt',
             text: `Thank you for your purchase! Amount: ${session.amount_total / 100} ${session.currency}.`,
         };
