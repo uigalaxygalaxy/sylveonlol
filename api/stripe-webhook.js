@@ -47,6 +47,9 @@ export default async function handler(req, res) {
             },
         });
 
+        const line2 = session.customer_details.address.line2 === null ? " " : session.customer_details.address.line2;
+
+
         const currency = (session.currency).toUpperCase();
         const mailOptions = {
             from: process.env.EMAIL_USER,
@@ -56,7 +59,7 @@ export default async function handler(req, res) {
 
             You have purchased our goods for ${session.amount_total / 100} ${currency}! 
 
-            Your goods will be shipped to: ${session.customer_details.address.line1} ${session.customer_details.address.line2}, ${session.customer_details.address.postal_code} ${session.customer_details.address.state} ${session.customer_details.address.country}
+            Your goods will be shipped to: ${session.customer_details.address.line1} ${line2}, ${session.customer_details.address.postal_code} ${session.customer_details.address.state} ${session.customer_details.address.country}
 
 
             We will give you your shipping number once we get to your order!
