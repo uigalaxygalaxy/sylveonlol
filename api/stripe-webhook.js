@@ -56,7 +56,7 @@ export default async function handler(req, res) {
             to: session.customer_details.email,
             subject: 'THANKS FOR PURCHASING!!!! ヽ(>∀<☆)ノ',
             text: `THANKS FOR BUYING!!!! 
-
+            <img src="https://sylveonlol.vercel.app/thanksforpurchasing.png">
             You have purchased our goods for ${session.amount_total / 100} ${currency}! 
         
             Your goods will be shipped to: ${session.customer_details.address.line1} ${line2}, ${session.customer_details.address.postal_code} ${session.customer_details.address.state} ${session.customer_details.address.country}
@@ -75,10 +75,8 @@ export default async function handler(req, res) {
                     ${session.customer_details.address.postal_code} ${session.customer_details.address.state},<br>
                     ${session.customer_details.address.country}
                 </p>
-
-                Watch out in a few days for a ${session.shipping.carrier} truck!
                 
-                <p>We will provide your shipping number once we process your order. Contact us anytime at our e-mail uigalaxyandromda@gmail.com or via discord!</p>
+                <p>We will provide your shipping number once we process your order,</p>
                 
                 <p>Thanks for the support!~ (ﾉ*ФωФ)ﾉ</p>
             `
