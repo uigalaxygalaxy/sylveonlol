@@ -65,7 +65,7 @@ export default async function handler(req, res) {
             Thanks for the support!~ (ﾉ*ФωФ)ﾉ`,
             
             html: `
-                        <img src="https://sylveonlol.vercel.app/thanksforpurchasing.png">
+                        <img src="https://sylveonlol.vercel.app/thanksforpurchasing.png" style="height: 400px">
 
                 <div><span style="color: #6bd1ff">T</span><span style="color: #74cbfd">H</span><span style="color: #7cc4fb">A</span><span style="color: #85bef9">N</span><span style="color: #8eb7f6">K</span><span style="color: #97b1f4">S</span><span style="color: #9fabf2"> </span><span style="color: #a8a4f0">F</span><span style="color: #b19eee">O</span><span style="color: #ba97ec">R</span><span style="color: #c291ea"> </span><span style="color: #cb8be8">B</span><span style="color: #d484e5">U</span><span style="color: #dd7ee3">Y</span><span style="color: #e577e1">I</span><span style="color: #ee71df">N</span><span style="color: #e669d4">G</span><span style="color: #de61c9">!</span><span style="color: #d659bf">!</span><span style="color: #ce51b4">!</span><span style="color: #c649a9">!</span><span style="color: #be419e"> </span><span style="color: #b63994">ヽ</span><span style="color: #ae3089">(</span><span style="color: #a6287e">></span><span style="color: #9e2073">∀</span><span style="color: #961868"><</span><span style="color: #8e105e">☆</span><span style="color: #860853">)</span><span style="color: #7e0048">ノ</span></div>
                 <p>You have purchased our goods for <strong>${session.amount_total / 100} ${currency}</strong>!</p>
