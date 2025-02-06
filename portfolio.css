@@ -1,0 +1,455 @@
+
+:root {
+    -CC: 123, 123, 123;
+}
+@property --video {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+  }
+
+  @property --photo {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+  }
+  @property --htmlcss {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+  }
+  :root {
+    --endvideo: 0;
+  }
+@keyframes ColorScroll {
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    75% {
+    }
+    to {
+
+    }
+    
+}
+.EverythingWrapper {
+    margin-top: 12px;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.portfolioWrapper {
+    display: block;
+    width: 100vw;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.portfolio, .experience, .motion {
+    font-size: 64px;
+    display: block;
+    text-align: center;
+    clip-path: polygon(9% 0%, 91% 0, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
+    height: 70px;
+    width: 45vw;
+    background-color: rgb(var(--CC));
+    position: relative;
+    box-shadow: 0 0 134px rgba(var(--CC), 0.35);
+
+}
+.motionContentWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.motionImg {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+
+}
+.motionInfo {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.motionTitle, .youtubeTitle {
+    font-family: "B612";
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: -15px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 12px rgba(var(--CC), 0.5);
+    text-shadow: 0 0 6px rgba(var(--CC), 0.8);
+}
+
+.youtubeTitle {
+    margin-bottom: 84px;
+}
+.motionDate {
+    font-size: 0.8rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 12px rgba(var(--CC), 0.5);
+    text-shadow: 0 0 6px rgba(var(--CC), 0.8);
+}
+.experience, .motion {
+    margin-top: 5vh;
+    width: 28vw;
+    height: 49px;
+    font-size: 42px;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+.ExperienceDescription {
+    width: calc(48vw + 77px);
+    height: 100px;
+    box-shadow: 0 0 184px rgba(var(--CC), 0.5),
+     -100px 0 184px rgba(var(--CC), 0.3),
+     100px 0 184px rgba(var(--CC), 0.3);
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    min-width: 390px;
+}
+
+.PortfolioHeader, .PortfolioHeader2 {
+    margin-left: 10px;
+    height: 56px;
+    width: calc(48vw + 77px);
+    min-width: 390px;
+    background-color: rgb(var(--CC)); 
+    box-shadow: 0 0 184px rgba(var(--CC), 0.5);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    background-image: -webkit-linear-gradient(bottom, rgba(var(--C2)) 10%, rgb(var(--CC)) 10%);
+    justify-content: center;
+    clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+}
+.PortfolioHeader2 {
+    clip-path: polygon(0 0, 100% 0, 93% 100%, 7% 100%);
+}
+.porText {
+    font-size: 54px;
+    margin: 0 0 0 0;
+
+}
+.desc  {
+    font-family: "B612";
+    font-size: 0.9rem;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    margin-left: 6px;
+    text-align: left;
+    color: white;
+    text-shadow: 0 0 12px rgba(var(--CC), 0.5);
+    text-shadow: 0 0 6px rgba(var(--CC), 0.8);
+}
+@media only screen and (max-width: 1300px) {
+    .desc {
+        font-size: 0.72rem;
+    }
+  }
+.TimeDesc {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    margin-bottom: 31px;
+}
+.TimeDescTxt {
+    font-size: 26px;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+    color: rgb(var(--CC));
+    transition: all 0.9s cubic-bezier(.05,.67,.37,.91);
+
+}
+.TimeWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center;
+}
+.motionWrapper {
+    margin-top: 4vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 32%;
+    margin-left: 15px;
+}
+.motion {
+    margin-top: 0;
+    clip-path: none;
+    transform: skew(-10deg);
+    background: rgb(var(--CC));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.9s cubic-bezier(.05,.67,.37,.91);
+    min-width: 290px;
+
+
+}
+.motionstuff {
+    transform: skew(-10deg);
+    background: rgb(var(--CC));
+    width: 25px;
+    margin-left: 12px;
+    height: 49px;
+    transition: all 0.9s cubic-bezier(.05,.67,.37,.91);
+    box-shadow: 0 0 134px rgba(var(--CC), 0.35);
+
+}
+.motionWrapper:hover .motionstuff {
+    margin-left: 30px;
+}
+.motionWrapper:hover .motion{
+    box-shadow: 0 0 134px rgba(var(--CC), 0.55);
+    transform: skew(-26deg);
+    animation: rgb 5s infinite;
+}
+.motionWrapper:hover .motionstuff {
+    box-shadow: 0 0 134px rgba(var(--CC), 0.55);
+    transform: skew(-26deg);
+    animation: rgb 5s infinite;
+}
+
+.motionTxt {
+    font-size: 48px;
+    text-align: center;
+    vertical-align: center;
+    width: 100%;
+    height: 100%;
+}
+.motionGlow {
+    filter: drop-shadow(0 0 134px rgba(var(--CC), 0.24));
+}
+.motionShow {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    width: 100vw;
+    background-color: rgb(0,0,0,0);
+    height: 20vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(13, 25vw);
+    min-height: 200px;
+    min-width: 500px;
+    grid-template-rows: 21vh;
+    grid-column-gap: 12px;
+
+}
+.ytbutton {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    width: 23vw;
+    font-family: "Carbon Bold";
+    padding: 8px 0 8px;
+    border: none;
+    margin-top: 0px;
+    border-style: solid;
+    border-width: 3px;
+    text-align: middle;
+    border-color: rgb(var(--CC));
+    background-color: rgb(9, 9, 15, 0);
+    color: rgb(var(--CC));
+    transition: all 0.44s cubic-bezier(0,.77,.37,1.18);
+    overflow: hidden;
+    border-radius: 4px;
+    margin-top: -50px;
+    text-shadow: 0 0 12px rgba(var(--CC), 0.4);
+}
+.motionContentWrapper {
+    text-decoration: none;
+    box-shadow: 0 0 134px rgba(var(--CC), 0.18);
+    transition: all 0.9s cubic-bezier(.05,.67,.37,.91);
+}
+
+.motionContentWrapper:hover {
+    transform: skew(-7deg);
+}
+.portfolio::before, .experience::before {
+display: inline-block;  
+content: '';
+position: absolute;
+height: 75px;
+width: 169px;
+filter: blur(2px);
+background-image: -webkit-linear-gradient(left, rgba(255, 0, 0, 0) 0%, rgba(255, 255, 255, 0.32) 50%, transparent 55%);
+transform: skew(-45deg);
+top: -10px;
+left: -150px;
+z-index: 3;
+animation: LightSweepTheader 3.2s 1s linear infinite;
+}
+@keyframes LightSweepTheader {
+0% {
+    left: -150px;
+}
+9% {
+    left: calc(100% + 50px);
+}
+100% {
+    left: calc(100% + 50px);
+}
+}
+
+.secCountTxt::after {
+    content: counter(video);
+  }
+  @keyframes videoKey {
+    from{ 
+        --video: 0;
+    }
+    to{ 
+        --video: var(--endvideo);
+    }
+  }
+  .SecSquare {
+    min-width: 180px;
+    width: calc(6vw + 60px); 
+}
+.SmolSquare {
+    min-width: 120px;
+    width: calc(3vw + 40px);
+}
+.secCount {
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 0 134px rgba(var(--CC), 0.35);
+
+}
+.warn {
+    font-size: 32px;
+    color: rgb(255,212,212);
+    animation: rgb 4s infinite;
+}
+
+.secCountTxt, .secCountTotal, .inbetween {
+    font-family: "B612";
+    font-size: 1.4rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 12px rgba(var(--CC), 0.5);
+    text-shadow: 0 0 6px rgba(var(--CC), 0.8);
+    counter-set: video var(--video);
+    animation: videoKey 7.6s forwards;
+    animation-timing-function: cubic-bezier(0,0.98,0,0.98);
+    animation-delay: 0.7s;
+}
+.secCountTotal {
+    animation: none;
+}
+.secLabel {
+    
+    border-width: 3px;
+    height: 38px;
+    min-width: 120px;
+    background-color: rgb(var(--CC)); 
+    margin: 0 0 0 0;
+    box-shadow: 0 0 134px rgba(var(--CC), 0.35);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    margin-top: -4px;
+
+}
+
+.visitorWrapper123 {
+    width: 60%;
+     display: flex;
+      justify-content: center;
+
+}
+.reason {
+    justify-self: center;
+    vertical-align: center;
+    text-align: center;
+    font-family: "B612";
+    font-size: 0.9rem;
+    color: white;
+    text-shadow: 0 0 12px rgba(var(--CC), 0.5);
+    text-shadow: 0 0 6px rgba(var(--CC), 0.8);
+}
+.rule {
+    color: rgb(193, 124, 242);
+    text-shadow: 0 0 16px rgba(193, 124, 242, 0.8);
+    transition: all 0.44s cubic-bezier(0,.77,.37,1.18);
+    font-size: 1.35em;
+    text-decoration: dashed underline 1px rgba(193, 124, 242, 0.5);
+}
+.rule:hover {
+    font-size: 1.75em;
+    text-shadow: 0 0 8px rgb(193, 124, 242);
+    text-decoration: dashed underline 0px rgba(193, 124, 242, 0);
+
+}
+.rule:hover {
+    font-size: 1.75em;
+    text-shadow: 0 0 8px rgb(193, 124, 242);
+    text-decoration: dashed underline 0px rgba(193, 124, 242, 0);
+
+}
+.rule {
+    position: relative; /* Make this the positioning context for the tooltip */
+    display: inline-block; /* Ensures the tooltip aligns properly */
+  }
+  
+  .A6Rule {
+    text-shadow: 0 0 8px rgb(193, 124, 242);
+    visibility: hidden;
+    width: 420px;
+    background-color: rgba(0, 0, 0, .9);
+    filter: blur(3px);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 127;
+    font-size: 0.9rem;
+    bottom: 75%; /* Position tooltip above the text */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* For smooth transition */
+    transition: opacity, transform, 0.5s cubic-bezier(0,.77,.37,1.18);;
+  }
+  
+  .rule:hover .A6Rule {
+    visibility: visible;
+    opacity: 1; /* Fade in the tooltip */
+    bottom: 125%;
+    filter: blur(0px);
+  }
