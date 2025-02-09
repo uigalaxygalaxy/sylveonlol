@@ -1,5 +1,6 @@
 .dashboard, .dashboardblack, .dashboardLogo {
-    height: 10%;
+    height: 10vh;
+    width: 100vw;
     min-height: 75px;
     max-height: 150px;
     display: flex;
@@ -7,7 +8,10 @@
 
 }
 .dashboardplace{
-    height: 0vh;
+    width: 100vw;
+    height: 10vh;
+    min-height: 75px;
+    max-height: 150px;
 
 }
 .notifBar {
@@ -111,15 +115,15 @@
 }
 .categoryWrapper {
     display: grid;
-    margin-top: 60px;
     margin-bottom: 3px;
     height: 5vh;
     max-height: 30px;
     min-height: 20px;
     margin-left: -8px;
-    margin-right: -14px;
+    margin-right: -0px;
     grid-template-columns: repeat(7, 1fr);
 }
+
 .categoryBox {
     color: rgb(var(--CC));
     width: 100%;
@@ -139,6 +143,7 @@
     filter: saturate(0.75);
     transition: all 0.44s cubic-bezier(0,.77,.37,1.18);
 }
+
 .categoryBox:hover {
     color: white;
     text-shadow: 0 0 7px rgb(255, 255, 255, 0.34);
@@ -158,15 +163,15 @@ color: black;
     transform: translateY(295%); /* Center vertically */
     height: 15vh; /* Adjust as needed */
     width: 75vw; /* Adjust as needed */
-    background-image: url(icons/Crush80.png), linear-gradient(rgb(var(--CC)), rgb(var(--C2)));
+    background-image: url(icons/SylveonBundle.png), linear-gradient(rgb(var(--CC)), rgb(var(--C2)));
     background-size: contain; /* Ensures the entire image is visible */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image */
     background-blend-mode: screen; /* Blend mode for the background */
     
     /* Mask properties */
-    -webkit-mask-image: url(icons/Crush80.png); /* For better browser support */
-    mask-image: url(icons/Crush80.png);
+    -webkit-mask-image: url(icons/SylveonBundle.png); /* For better browser support */
+    mask-image: url(icons/SylveonBundle.png);
     -webkit-mask-size: contain; /* Ensures the entire mask is visible */
     mask-size: contain;
     -webkit-mask-repeat: no-repeat; /* Prevents the mask from repeating */
@@ -206,7 +211,7 @@ overflow: hidden;
 }
 
 .product .quantity-controls input {
-    width: 50px;
+    width: 40px;
     text-align: center;
     border: 1px solid #ddd;
     padding: 5px;
@@ -266,13 +271,14 @@ overflow: hidden;
     vertical-align: center;
     text-align: center;
 }
-
 /* Cart Panel */
 .cart-panel {
     position: fixed;
     top: 0;
-    right: -524px; /* Hide the panel by default */
-    width: 500px;
+    right: -827px; /* Hide the panel by default */
+    width: 60vw;
+    max-width: 777px;
+    min-width: 300px;
     height: 100%;
     background: rgb(36, 40, 51);
     border: rgba(var(--CC), 0.8);
@@ -325,13 +331,38 @@ overflow: hidden;
     color: white;
     text-shadow: 0 0 16px rgba(255, 255, 255, 1);
 }
+.AboutMe {
+    font-family: B612;
+    color: white;
+    text-shadow: 0 0 16px rgb(var(--CC));
+}
 .price {
     background-image: -webkit-linear-gradient(top, rgba(var(--CC),1), rgba(var(--C2),1));
     color: transparent;
     font-size: 42px;
+    display: inline-block;
+    white-space: pre;
     background-clip: text;
     text-shadow: 0 0 12px rgba(var(--CC), 1);
 }
+.priceStrike {
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(127,127,127,1));
+    color: transparent;
+    font-size: 28px;
+    display: inline-block;
+    background-clip: text;
+    text-shadow: 0 0 12px rgba(var(--CC), 1);
+}
+.discountText {
+        background-image: -webkit-linear-gradient(top, rgba(var(--CC),1), rgba(var(--C2),1));
+        color: transparent;
+        font-size: 24px;
+        display: block;
+        background-clip: text;
+        text-shadow: 0 0 12px rgba(var(--CC), 1);
+        text-decoration: none;
+}
+
 .addToCart {
     padding: 10px 20px;
     color: rgb(var(--CC));
@@ -403,6 +434,7 @@ overflow: hidden;
 .color-options input[type="radio"] {
     margin-right: 5px;
 }
+
 .subtotalText {
     margin-top: 36px;
     color: white;
@@ -416,4 +448,89 @@ overflow: hidden;
     font-size: 32px;
     background-clip: text;
     text-shadow: 0 0 12px rgba(var(--CC), 1);
+}
+@media only screen and (max-width: 850px) {
+    .categoryBox {
+        font-size: 16px;
+    }
+    #cartButton {
+        padding: 5px 15px;
+        right: 40px;
+    }
+    .Money {
+    }
+    .cartBg {
+
+
+    }
+    
+}
+@media only screen and (max-width: 530px) {
+    .categoryBox {
+        font-size: 14px;
+    }
+    .categoryWrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 20px);
+        margin-bottom: 20px;
+    }
+    #cartButton {
+        padding: 5px 15px;
+        right: 20px;
+    }
+}
+.categoryMetroWrapper {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 25vh;
+    min-height: 250px;
+    max-height: 500px;
+    display: grid;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    grid-template-columns: 1.5fr 1.25fr repeat(2, 1fr);
+}
+.categoryMetroWrapper button {
+    border-radius: 4px;
+    font-size: 24px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.44s cubic-bezier(0,.77,.37,1.18);
+}
+.categoryMetroWrapper button:hover {
+    margin: 12px 12px 12px 12px;
+    color: white;
+}
+.categoryMetroWrapper button:hover .bgText {
+    font-size: 42px;
+    transform: translateX(0%);
+    color: white;
+
+}
+.latMetro {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.battlestationMetro {
+    color: black;
+}
+.battlestationMetro:hover {
+    background-image: linear-gradient(135deg, black 0%, rgb(var(--C2)) 100%);
+
+}
+.keyboardsMetro {
+    color: black;
+}
+.keyboardsMetro:hover {
+    background-image: linear-gradient(135deg, rgb(0, 20, 53) 0%, rgb(201, 222, 255) 100%);
+
+}
+.bgText {
+    position: absolute;
+    align-self: center;
+    font-size: 32px;
+    opacity: 1;
+    mix-blend-mode: overlay;
+    color: black;
 }
