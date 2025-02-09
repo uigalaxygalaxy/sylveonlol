@@ -116,14 +116,20 @@ function updateCartUI() {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
-                <span>${item.name}${item.color ? ` (${item.color})` : ''}</span>
-                <span>$${(item.price * item.quantity).toFixed(2)}</span>
+            <div>
+            <div>
+                <span style="font-family: B612; color: white; font-size: 16px; text-shadow: 0 0 8px rgba(255, 255, 255, 1);">${item.name}${item.color ? ` (${item.color})` : ''}</span>
+                <span class="subtotalValue" style="font-size: 24px">$${(item.price * item.quantity).toFixed(2)}</span>
+                </div>
+
+                            <div>
                 <div class="quantity-controls">
-                    <button onclick="changeQuantity(${index}, -1)">-</button>
-                    <input type="number" value="${item.quantity}" min="1" onchange="changeQuantity(${index}, 0, this.value)">
-                    <button onclick="changeQuantity(${index}, 1)">+</button>
+                    <input class="quantity" type="number" value="${item.quantity}" min="1" onchange="changeQuantity(${index}, 0, this.value)">
+                                    </div>
+
                 </div>
                 <button class="remove-item" onclick="removeItem(${index})">Remove</button>
+                </div>
             `;
             cartItems.appendChild(cartItem);
         });
