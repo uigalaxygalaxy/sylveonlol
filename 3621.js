@@ -249,14 +249,14 @@ accessoriesicons: [
         title: "Coiled Braided Keyboard Cord",
         price: "$24.49",
         discount: "$27.99",
-        percent: "💜"
+        percent: "12.5% OFF"
     },
     {
-        imgSrc: "icons/thxforsupport.png",
-        title: "Coming Soon!",
-        price: "<3",
-        discount: "",
-        percent: "💜"
+        imgSrc: "icons/sylveonplush.jfif",
+        title: "Sanei 13' All Star Sylveon Plush [Made in Japan]",
+        price: "$32.49",
+        discount: "$37.99",
+        percent: "15% OFF"
     },
     {
         imgSrc: "icons/thxforsupport.png",
@@ -336,14 +336,14 @@ dealsicons: [
         title: "Coiled Braided Keyboard Cord",
         price: "$24.49",
         discount: "$27.99",
-        percent: "💜"
+        percent: "12.5% OFF"
     },
     {
-        imgSrc: "icons/thxforsupport.png",
-        title: "Coming Soon!",
-        price: "<3",
-        discount: "",
-        percent: "💜"
+        imgSrc: "icons/sylveonplush.jfif",
+        title: "Sanei 13' All Star Sylveon Plush [Made in Japan]",
+        price: "$32.49",
+        discount: "$37.99",
+        percent: "15% OFF"
     },
     {
         imgSrc: "icons/thxforsupport.png",
