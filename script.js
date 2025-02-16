@@ -1,3 +1,4 @@
+
 // DOM Elements
 const cartButton = document.getElementById('cartButton');
 const cartPanel = document.getElementById('cartPanel');
@@ -123,10 +124,10 @@ function updateCartUI() {
                 </div>
 
                             <div>
-                <div class="quantity-controls">
-                    <input class="quantity" type="number" value="${item.quantity}" min="1" onchange="changeQuantity(${index}, 0, this.value)">
-                                    </div>
-
+     <div class="quantity-controls">
+                    <button onclick="changeQuantity(${index}, -1)">-</button>
+                    <input type="number" value="${item.quantity}" min="1" onchange="changeQuantity(${index}, 0, this.value)">
+                    <button onclick="changeQuantity(${index}, 1)">+</button>
                 </div>
                 <button class="remove-item" onclick="removeItem(${index})">Remove</button>
                 </div>
@@ -178,3 +179,28 @@ function removeItem(index) {
 
 // Initialize Cart UI on Page Load
 updateCartUI();
+
+function adjustBestSellingItems() {
+    const container = document.getElementById("bestsellingWrapper");
+    const items = container.querySelectorAll(".bestSellingItemWrapper");
+    const screenWidth = window.innerWidth;
+
+    let maxVisible = 8; // Default (for large screens)
+
+    if (screenWidth <= 1651) {
+        maxVisible = Math.floor(screenWidth / 240);
+    }
+
+    // Show only the needed number of items
+    items.forEach((item, index) => {
+        item.style.display = index < maxVisible ? "grid" : "none";
+    });
+}
+
+// Run on page load and window resize
+window.addEventListener("load", adjustBestSellingItems);
+window.addEventListener("resize", adjustBestSellingItems);
+
+// Run function on load & resize
+window.addEventListener('load', hideOverflowingItems);
+window.addEventListener('resize', hideOverflowingItems);
