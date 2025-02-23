@@ -58,7 +58,7 @@ ACCESSORIES
 <div class="categoryBox">
 DEALS
 </div>
-<div class="categoryBox">
+<div class="categoryBox" id="openPopup">
     UI COLOR
 </div>
 <div class="categoryBox">
@@ -90,6 +90,33 @@ DEALS
     </div>
 
 </div>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Change the UI Color!</h2>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(36, 230, 155), rgb(9, 219, 104))" data-color="36, 230, 155" data-color2="9, 219, 104">Mint</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(123, 123, 255), rgb(85, 45, 223))" data-color="123, 123, 255" data-color2="85, 45, 223">Grape</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(254, 195, 119), rgb(255, 121, 79))" data-color="254, 195, 119" data-color2="255, 121, 79">Mango</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(255, 72, 85), rgb(214, 24, 36))" data-color="255, 72, 85" data-color2="214, 24, 36">Cuprite</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(107, 174, 255), rgb(32, 88, 255))" data-color="107, 174, 255" data-color2="32, 88, 255">Azulze</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(213, 175, 143), rgb(207, 138, 90))" data-color="213, 175, 143" data-color2="207, 138, 90">Bourbon</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(226, 200, 232), rgb(210, 157, 206))" data-color="226, 200, 232" data-color2="210, 157, 206">Lomadex</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(166, 237, 176), rgb(92, 161, 101))" data-color="166, 237, 176" data-color2="92, 161, 101">Pacifici</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(240, 119, 222), rgb(250, 40, 204))" data-color="240, 119, 222" data-color2="250, 40, 204">Triangle</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(255, 178, 243), rgb(237, 69, 212))" data-color="255, 178, 243" data-color2="237, 69, 212">Sylveon</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(186, 223, 255), rgb(110, 178, 255))" data-color="186, 223, 255" data-color2="110, 178, 255">Rivulet</button>
+      <button class="change-color" style="background-image: linear-gradient(135deg, rgb(0, 79, 224), rgb(0, 4, 135)); color: white" data-color="0, 79, 224" data-color2="0, 4, 135">Unfortunate Development</button>
+
+
+
+      <button id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <script src="color.js"></script>
+
+
+
 
     <!-- Cart Button -->
     <button id="cartButton">CART: <span class="Money">:D</span><div class="cartBg"></div>  </button>
@@ -170,6 +197,28 @@ DEALS
 </div>
 </div>
 
+<script>
+document.getElementById("bundleBttn").addEventListener("click", function() {
+  window.location.href = "/bundles"; // Navigate to the subdirectory
+});
+document.getElementById("keyboardBttn").addEventListener("click", function() {
+  window.location.href = "/keyboards"; // Navigate to the subdirectory
+});
+document.getElementById("keycapsBttn").addEventListener("click", function() {
+  window.location.href = "/keycaps"; // Navigate to the subdirectory
+});
+document.getElementById("deskmatsBttn").addEventListener("click", function() {
+  window.location.href = "/deskmats"; // Navigate to the subdirectory
+});
+document.getElementById("accessoriesBttn").addEventListener("click", function() {
+  window.location.href = "/other"; // Navigate to the subdirectory
+});
+document.getElementById("dealsBttn").addEventListener("click", function() {
+  window.location.href = "/deals"; // Navigate to the subdirectory
+});
+
+</script>
+
 <div class="Bestsellers">BESTSELLERS</div>
 <div class="bestsellingWrapper" id="bestsellingWrapper">
     <div class=bestSellingItemWrapper>
@@ -205,8 +254,8 @@ DEALS
 
     <div class=bestSellingItemWrapper>
 
-        <img class="bestsellingimg" src="icons/volunteer_activism_24dp_FILL0_wght400_GRAD0_opsz24.svg">
-        <div class="bestTitle">12 hour Supreme Jelq Lesson
+        <img class="bestsellingimg" src="icons/thxforsupport.png">
+        <div class="bestTitle">asdasdasd
             <div>
                 <p class="price" style="font-size: 26px">$124.99<p class="priceStrike"></p>
             </div>
