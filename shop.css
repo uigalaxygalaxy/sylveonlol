@@ -1,8 +1,8 @@
 
-.b {
-    background-color: rgb(var(--CC));
-    backdrop-filter: brightness(0.1) saturate(0.33);
+body {
+    background-color: color-mix(in srgb, rgba(var(--CC), 1) 5%, rgba(24,24,24,1));
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 .dashboard, .dashboardblack, .dashboardLogo {
     height: 10vh;
@@ -611,9 +611,8 @@ overflow: hidden;
     width: 100%;
     height: 100%;
     max-height: 200px;
-
+    background-color: rgb(255, 255, 255);
     object-fit: cover;   
-    background-color: rgb(225, 225, 225);
 }
 .bestTitle {
     width: 100%;
@@ -624,4 +623,154 @@ overflow: hidden;
     margin-top: 8px;
     font-size: 16px;
     text-shadow: 0 0 16px rgba(255, 255, 255, 1);
+}
+.showdown123 {
+    margin-left: -50px;
+    grid-gap: 8px;
+    margin-bottom: 80px;
+
+}
+.bttnwrapper {
+    margin-bottom: 60px;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 300px;
+    text-align: center;
+    z-index: 999999999;
+  }
+  
+  .change-color {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+        z-index: 999999999;
+  }
+  
+  .change-color:hover {
+    background-color: #ddd;
+  }
+  
+  #closePopup {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4d4d;
+    color: white;
+  }
+
+  .categoryNavbar {
+    display: flex;
+    align-content: center;
+    justify-content: start;
+  }
+  .bastarda {
+
+  }
+  .categoryTitle {
+    font-size: 84px;
+    display: flex;
+    align-items: center;
+    background-image: -webkit-linear-gradient(top, rgba(var(--CC),1), rgba(var(--C2),1));
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 29px rgb(var(--CC));
+    transition: all 0.44s cubic-bezier(0,.77,.37,1.18);
+
+  }
+  .categoryTitle:hover {
+    text-shadow: 0 0 14px rgb(var(--CC));
+  }
+  .goBack {
+    background: none;
+    border-style: none;
+    font-family: B612;
+    color: rgb(var(--CC));
+    transition: all 0.44s cubic-bezier(0,.77,.37,1.18);
+    margin-left: 40px;
+
+  }
+  .goBack:hover {
+    text-shadow: 0 0 9px rgb(var(--CC));
+    margin-left: 34px;
+  }
+  .bttnwrapper, .ColorBttn, .colorPanel, .tooltip {
+    z-index: 0;
+  }
+  .popup {
+    z-index: 100000;
+  }
+.catelogItem {
+    width: 33vw;
+    height: 24vw;
+    min-height: 300px;
+    max-height: 500px;
+    min-width: 300px;
+    max-width: 500px;
+    object-fit: cover;   
+}
+.catelogItem:hover .catelogTitle {
+    font-size: 22px;
+    color: rgb(var(--CC));
+    text-shadow: 0 0 22px rgb(var(--CC));
+}
+.catelogItem:hover .catelogItemImg {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.96);
+}
+
+.catelogWrapper {
+    display: flex;
+    width: 90vw;
+    height: 40vh;
+    gap: 20px;
+    row-gap: 120px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.catelogTitle {
+    width: 100%;
+    height: 10%;
+    font-family: B612;
+    color: white;
+    transition: all 0.44s cubic-bezier(0,.77,.37,1.18);
+    text-align: center;
+    padding-top: 8px;
+    font-size: 18px;
+    text-shadow: 0 0 16px rgba(255, 255, 255, 1);
+}
+.catelogItemImg {
+    transition: all 0.44s cubic-bezier(0,.77,.37,1.18);
+
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        object-fit: cover;   
 }
