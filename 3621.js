@@ -242,7 +242,7 @@ accessoriesicons: [
         title: "Stainless Steel Switch Puller",
         price: "$3.99",
         discount: "$4.99",
-        percent: "12.5% OFF"
+        percent: "20% OFF"
     },
     {
         imgSrc: "icons/cord.avif",
@@ -329,7 +329,7 @@ dealsicons: [
         title: "Stainless Steel Switch Puller",
         price: "$3.99",
         discount: "$4.99",
-        percent: "12.5% OFF"
+        percent: "20% OFF"
     },
     {
         imgSrc: "icons/cord.avif",
