@@ -1,3 +1,4 @@
+
 const wrappers = document.querySelectorAll('.bestSellingItemWrapper');
 
 function createItemHTML(item) {
@@ -52,6 +53,22 @@ const keyboardButton = document.getElementById('keyboardBttn');
 const deskmatsButton = document.getElementById('deskmatsBttn');
 const AccessoriesBttn = document.getElementById('accessoriesBttn');
 const DealsBttn = document.getElementById('dealsBttn');
+
+hoverButton.addEventListener('mouseenter', () => {
+    DeskmatEnabled = false;
+});
+
+AccessoriesBttn.addEventListener('mouseenter', () => {
+    DealsEnabled = false;
+});
+
+const MetroWrapper = document.querySelector('.categoryMetroWrapper');
+
+MetroWrapper.addEventListener('mouseleave', () => {
+DeskmatEnabled = true;
+DealsEnabled = true;
+});
+
 
 hoverButton.addEventListener('mouseover', async () => {
     const items = await fetchBestSelling('keycaps');
