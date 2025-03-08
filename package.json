@@ -4,7 +4,8 @@
   "description": "pacc",
   "main": "random.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+"install": "npm install --force"
   },
   "repository": {
     "type": "git",
@@ -14,8 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "@vercel/speed-insights": "^1.0.12",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
     "ioredis": "^5.4.1",
     "micro": "^10.0.1",
     "mongodb": "^6.14.2",
