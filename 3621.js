@@ -29,6 +29,17 @@ async function fetchAllData() {
 // Call fetchAllData when the page loads
 window.addEventListener('load', fetchAllData);
 
+function createItemHTML(item) {
+    return `
+        <img class="bestsellingimg" src="${item.imgSrc}">
+        <div class="bestTitle">${item.title}
+            <div>
+                <p class="price" style="font-size: 26px">${item.price}<span style="font-size: 12px; white-space: pre;"> </span><p class="priceStrike"><span style="text-decoration: line-through rgba(128,128,128,0.5); font-size: 16px; white-space: pre">${item.discount}</span> <p> <span class="discountText" style="font-size: 18px;">${item.percent}</span> </p>
+            </div>
+        </div>
+    `;
+}
+
 function updateWrapperContent(wrappers, items) {
     wrappers.forEach((wrapper, index) => {
         const item = items[index] || { imgSrc: "", title: "", price: "", discount: "", percent: "" }; // Fallback for missing items
