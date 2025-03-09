@@ -4,7 +4,6 @@
   "description": "pacc",
   "main": "random.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
   },
   "repository": {
     "type": "git",
