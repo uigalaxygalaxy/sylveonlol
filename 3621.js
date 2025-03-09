@@ -1,8 +1,5 @@
 
 const wrappers = document.querySelectorAll('.bestSellingItemWrapper');
-document.addEventListener("DOMContentLoaded", function () {
-
-});
 
 // Cache object to store fetched data
 const cachedData = {
