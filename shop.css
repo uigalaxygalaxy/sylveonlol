@@ -162,31 +162,35 @@ body {
 .Cart:hover .cartMoney {
 color: black;
 }
+/*
 .bestText { 
        z-index: 212;
-    top: 50%; /* Position from the top */
-    left: 3%; /* Position from the left */
-    transform: translateY(295%); /* Center vertically */
-    height: 15vh; /* Adjust as needed */
-    width: 75vw; /* Adjust as needed */
+    top: 50%;
+    left: 3%;
+    transform: translateY(295%);
+    height: 15vh;
+    width: 75vw; 
     background-image: url(icons/SylveonBundle.png), linear-gradient(rgb(var(--CC)), rgb(var(--C2)));
-    background-size: contain; /* Ensures the entire image is visible */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
-    background-blend-mode: screen; /* Blend mode for the background */
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-blend-mode: screen; 
     
-    /* Mask properties */
-    -webkit-mask-image: url(icons/SylveonBundle.png); /* For better browser support */
+
+    -webkit-mask-image: url(icons/SylveonBundle.png); 
     mask-image: url(icons/SylveonBundle.png);
-    -webkit-mask-size: contain; /* Ensures the entire mask is visible */
+    -webkit-mask-size: contain; 
     mask-size: contain;
-    -webkit-mask-repeat: no-repeat; /* Prevents the mask from repeating */
+    -webkit-mask-repeat: no-repeat; 
     mask-repeat: no-repeat;
-    -webkit-mask-position: center; /* Centers the mask */
+    -webkit-mask-position: center;
     mask-position: center;
 
-    pointer-events: none; /* Allows clicks to pass through */
+    pointer-events: none;
 }
+
+*/
+
 .bestGlow {
     position: absolute;
     filter: drop-shadow(0px 0px 6px black);
