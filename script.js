@@ -24,6 +24,7 @@ function hideLoadingScreen() {
 // Example: Hide the loading screen after 3 seconds (for testing)
 setTimeout(hideLoadingScreen, 3000);
 
+if(document.getElementById('keycapsBttn')) {
 window.addEventListener('load', fetchAllData);
 // Example: Hide the loading screen after all data is fetched
 async function fetchAllData() {
@@ -40,6 +41,9 @@ async function fetchAllData() {
     } finally {
         hideLoadingScreen(); // Hide the loading screen when done
     }
+}
+} else {
+    hideLoadingScreen();
 }
 
 // Call fetchAllData when the page loads
