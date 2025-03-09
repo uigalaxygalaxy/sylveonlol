@@ -4,8 +4,7 @@
   "description": "pacc",
   "main": "random.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-"install": "npm install --force"
+    "test": "echo \"Error: no test specified\"",
   },
   "repository": {
     "type": "git",
