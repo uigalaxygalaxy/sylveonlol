@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "pacc",
   "main": "random.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "sylveonlol"
@@ -13,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "@vercel/speed-insights": "^1.0.12",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "ioredis": "^5.4.1",
     "micro": "^10.0.1",
     "mongodb": "^6.14.2",
