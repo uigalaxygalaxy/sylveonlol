@@ -28,13 +28,36 @@ app.get('/api/deals', async (req, res) => {
         .toArray();
 
         // Map the results to match the frontend's expected format
-        const formattedItems = dealItems.map(item => ({
-            imgSrc: item.image_urls[0], // Use the first image URL
-            title: item.name,
-            price: `$${item.price.toFixed(2)}`, // Format price as a string
-            discount: `$${item.discount.toFixed(2)}`, // Format discount as a string
-            percent: `${Math.round(((item.discount - item.price) / item.discount) * 100)}% OFF` // Calculate discount percentage
-        }));
+        const formattedItems = dealItems.map(item => {
+            const hasDiscount = item.discount !== item.price; // Check if there's a valid discount
+            return {
+                imgSrc: item.image_urls?.[0] || 'default-image-url.png', // Use the first image URL or a fallback
+                title: item.name || 'No Title',
+                price: item.price ? `$${item.price.toFixed(2)}` : '$0.00', // Format price or provide a default
+                discount: hasDiscount ? `$${item.discount.toFixed(2)}` : "", // Format discount or set to empty string
+                percent: hasDiscount ? 
+                    `${Math.round(((item.discount - item.price) / item.discount) * 100)}% OFF` : "" // Calculate discount percentage or set to empty string
+            };
+        });
+
+        // Fill empty spots with a placeholder item (if needed)
+        while (formattedItems.length < 8) {
+            formattedItems.push({
+                imgSrc: 'icons/thxforsupport.png',
+                title: 'Coming Soon!',
+                price: '<3',
+                discount: "",
+                percent: ""
+            });
+        }
+
+        // Send the formatted items as the response
+        res.json(formattedItems);
+    } catch (error) {
+        console.error('Error fetching deal items:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
         // Fill empty spots with a placeholder item
         const placeholderItem = {
