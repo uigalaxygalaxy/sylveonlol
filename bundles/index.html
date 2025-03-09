@@ -21,6 +21,33 @@
 
 <body class="b">
 
+            <div id="loadingScreen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; display: flex; justify-content: center; align-items: center; z-index: 1000;">
+        <div style="text-align: center;">
+            <p id="loadingText"></p>
+            <!-- Optional: Add a spinner or animation -->
+             <div class="center">
+            <div class="spinner"></div>
+        </div>
+        </div>
+    </div>
+    <script>
+        const loadingMessages = [
+            "Sylveon is using Pixilate...",
+            "Loading cat images...",
+            "Attemping to calculating pi with these paws...",
+            "Building a blanket fort...",
+            "Watching comets fly...",
+            "Mining bitcoin... well, not really...",
+            "Sylveon's put random code in my website!! This might take a while...",
+            "Downloading the Pokeverse...",
+            "Rendering snuggles ... :3"
+        ];
+    
+        const loadingText = document.getElementById('loadingText');
+        const randomMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
+        loadingText.textContent = randomMessage;
+    </script>
+    
         <div class="dashboardLogo">
         </div>
         <div class="dashboard">
