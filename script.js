@@ -13,9 +13,16 @@ let cart = loadCart(); // Load cart from localStorage
 // Function to hide the loading screen
 function hideLoadingScreen() {
     const loadingScreen = document.getElementById('loadingScreen');
-    loadingScreen.style.display = 'none';
+    loadingScreen.classList.add('hidden'); // Add the 'hidden' class to trigger the fade-out
+
+    // Remove the loading screen from the DOM after the transition ends
+    loadingScreen.addEventListener('transitionend', () => {
+        loadingScreen.remove();
+    });
 }
 
+// Example: Hide the loading screen after 3 seconds (for testing)
+setTimeout(hideLoadingScreen, 3000);
 // Example: Hide the loading screen after all data is fetched
 async function fetchAllData() {
     try {
