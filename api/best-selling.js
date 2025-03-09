@@ -8,9 +8,19 @@ const uri = process.env.MONGO_URI;
 const dbName = process.env.DB_NAME;
 
 async function connectToMongoDB() {
-    const client = new MongoClient(uri);
-    await client.connect();
-    return client.db(dbName);
+    try {
+        console.log('Connecting to MongoDB...');
+        const client = new MongoClient(uri, {
+            tls: true, // Enable TLS/SSL
+            tlsAllowInvalidCertificates: false, // Ensure valid certificates
+        });
+        await client.connect();
+        console.log('Connected to MongoDB successfully!');
+        return client.db(dbName);
+    } catch (error) {
+        console.error('Error connecting to MongoDB:', error);
+        throw error;
+    }
 }
 app.get('/api/best-selling', async (req, res) => {
     const category = req.query.category; // Get category from query parameter
