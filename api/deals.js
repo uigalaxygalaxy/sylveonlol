@@ -58,27 +58,6 @@ app.get('/api/deals', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
-
-        // Fill empty spots with a placeholder item
-        const placeholderItem = {
-            imgSrc: "icons/thxforsupport.png",
-            title: "Coming Soon!",
-            price: "<3",
-            discount: "",
-            percent: "💜"
-        };
-
-        while (formattedItems.length < 8) {
-            formattedItems.push(placeholderItem);
-        }
-
-        res.json(formattedItems);
-    } catch (error) {
-        console.error('Error fetching deal items:', error);
-        res.status(500).json({ error: 'Internal server error' });
-    }
-});
-
 // Start the server
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
