@@ -10,6 +10,59 @@ const addToCartButtons = document.querySelectorAll('.addToCart');
 // Cart Data
 let cart = loadCart(); // Load cart from localStorage
 
+// Function to hide the loading screen
+function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    loadingScreen.style.display = 'none';
+}
+
+// Example: Hide the loading screen after all data is fetched
+async function fetchAllData() {
+    try {
+        cachedData.keycaps = await fetchBestSelling('keycaps');
+        cachedData.bundles = await fetchBestSelling('bundles');
+        cachedData.keyboards = await fetchBestSelling('keyboards');
+        cachedData.deskmats = await fetchBestSelling('deskmats');
+        cachedData.accessories = await fetchBestSelling('accessories');
+        cachedData.deals = await fetchDeals();
+        console.log('All data fetched and cached successfully!');
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    } finally {
+        hideLoadingScreen(); // Hide the loading screen when done
+    }
+}
+
+// Call fetchAllData when the page loads
+window.addEventListener('load', fetchAllData);
+// Cache object to store fetched data
+const cachedData = {
+    keycaps: [],
+    bundles: [],
+    keyboards: [],
+    deskmats: [],
+    accessories: [],
+    deals: []
+};
+
+// Fetch all data on page load
+async function fetchAllData() {
+    try {
+        cachedData.keycaps = await fetchBestSelling('keycaps');
+        cachedData.bundles = await fetchBestSelling('bundles');
+        cachedData.keyboards = await fetchBestSelling('keyboards');
+        cachedData.deskmats = await fetchBestSelling('deskmats');
+        cachedData.accessories = await fetchBestSelling('accessories');
+        cachedData.deals = await fetchDeals();
+        console.log('All data fetched and cached successfully!');
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+    finally {
+        hideLoadingScreen();
+    }
+}
+
 // Load Cart from localStorage
 function loadCart() {
     const savedCart = localStorage.getItem('cart');

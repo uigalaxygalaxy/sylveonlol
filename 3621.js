@@ -1,30 +1,7 @@
 
 const wrappers = document.querySelectorAll('.bestSellingItemWrapper');
 
-// Cache object to store fetched data
-const cachedData = {
-    keycaps: [],
-    bundles: [],
-    keyboards: [],
-    deskmats: [],
-    accessories: [],
-    deals: []
-};
 
-// Fetch all data on page load
-async function fetchAllData() {
-    try {
-        cachedData.keycaps = await fetchBestSelling('keycaps');
-        cachedData.bundles = await fetchBestSelling('bundles');
-        cachedData.keyboards = await fetchBestSelling('keyboards');
-        cachedData.deskmats = await fetchBestSelling('deskmats');
-        cachedData.accessories = await fetchBestSelling('accessories');
-        cachedData.deals = await fetchDeals();
-        console.log('All data fetched and cached successfully!');
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-}
 
 // Call fetchAllData when the page loads
 window.addEventListener('load', fetchAllData);
