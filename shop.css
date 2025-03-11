@@ -775,10 +775,24 @@ input[type="number"]::-webkit-inner-spin-button {
     align-content: center;
     justify-content: start;
   }
+.uiURL {
+    transition: all 0.44s cubic-bezier(0,.77,.37,1.18);
 
+}
+.uiURL:hover {
+    color: white;
+    font-size: 1.1em;
+}
+.returntext {
+    line-height: 2em;
+}
+.points {
+    line-height: 0.4em;
+}
   .categoryTitle {
     font-size: 84px;
     display: flex;
+    text-align: center;
     align-items: center;
     background-image: -webkit-linear-gradient(top, rgba(var(--CC),1), rgba(var(--C2),1));
     background-clip: text;

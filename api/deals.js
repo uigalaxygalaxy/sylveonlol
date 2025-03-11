@@ -46,7 +46,7 @@ app.get('/api/deals', async (req, res) => {
                 imgSrc: 'icons/thxforsupport.png',
                 title: 'Coming Soon!',
                 price: '<3',
-                discount: "",
+                discount: "💜",
                 percent: ""
             });
         }
