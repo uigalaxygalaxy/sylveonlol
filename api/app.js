@@ -57,10 +57,7 @@ app.get('/keyboards', async (req, res) => {
       
       // 2. Render the same template but with real data
       res.render('keycaps', { 
-        type: keycaps,
-        // Include any other variables your template needs:
-        pageTitle: "KEYCAP COLLECTION",
-      });
+        type: keycaps });
     } catch (err) {
       console.error("Database error:", err);
       res.status(500).render('error', { message: "Failed to load keycaps" });
