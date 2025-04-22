@@ -11,12 +11,12 @@
     },
     {
       "src": "/keycaps",
-      "dest": "app.js",
+      "dest": "api/app.js",
       "methods": ["GET"]
     },
     {
       "src": "/keycaps/(.*)",
-      "dest": "app.js"
+      "dest": "api/app.js"
     }
   ]
 }
