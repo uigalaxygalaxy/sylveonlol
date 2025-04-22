@@ -8,6 +8,15 @@
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
+    },
+    {
+      "src": "/keycaps",
+      "dest": "app.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/keycaps/(.*)",
+      "dest": "app.js"
     }
   ]
 }

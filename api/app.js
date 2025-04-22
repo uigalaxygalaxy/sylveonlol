@@ -60,7 +60,6 @@ app.get('/keyboards', async (req, res) => {
         products: keycaps,
         // Include any other variables your template needs:
         pageTitle: "KEYCAP COLLECTION",
-        user: req.user // (if you have user sessions)
       });
     } catch (err) {
       console.error("Database error:", err);
