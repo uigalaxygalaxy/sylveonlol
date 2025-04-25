@@ -21,6 +21,16 @@
 
 <body class="b">
 
+    <% if (typeof products === 'undefined') { %>
+        <div class="alert alert-danger">
+          Error: No products data received from server.
+          <!-- Temporary debug info: -->
+          <pre>Route: <%= JSON.stringify({ path: req.path, method: req.method }, null, 2) %></pre>
+        </div>
+      <% } else { %>
+        <!-- Your existing product display code here -->
+      <% } %>
+      
     
     <div id="loadingScreen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; display: flex; justify-content: center; align-items: center; z-index: 1000;">
         <div style="text-align: center;">

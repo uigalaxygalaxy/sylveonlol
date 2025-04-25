@@ -54,7 +54,7 @@ app.get('/keyboards', async (req, res) => {
     try {
       // 1. Fetch real data from MongoDB
       const keycaps = await Product.find({ type: 'keycaps' });
-      
+      console.log(`Found ${products.length} products`); // Debug line
       // 2. Render the same template but with real data
       res.render('keycaps', { 
         products: keycaps });
