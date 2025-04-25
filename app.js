@@ -74,7 +74,7 @@ app.get('/test-keycaps', (req, res) => {
       }]
     });
   });
-
+/*
 // Static file routes - Fixed to point to correct directories
 app.use('/bundles', express.static(path.join(__dirname, '../bundles')));
 app.use('/deskmats', express.static(path.join(__dirname, '../deskmats')));
@@ -85,7 +85,7 @@ app.use('/keyboards', express.static(path.join(__dirname, '../keyboards')));
 app.use('/privacy-policy', express.static(path.join(__dirname, '../policies')));
 app.use('/refund-policy', express.static(path.join(__dirname, '../policies')));
 app.use('/terms-of-service', express.static(path.join(__dirname, '../policies')));
-
+*/
 
 // Error handling middleware
 app.use((err, req, res, next) => {
