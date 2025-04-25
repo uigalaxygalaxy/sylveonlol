@@ -1,20 +1,22 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/app.js",
-      "use": "@vercel/node"
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
     }
-  ],
+  },
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
       "src": "/keycaps",
-      "dest": "api/app.js",
+      "dest": "app.js",
       "methods": ["GET"]
     },
     {
       "src": "/keycaps/(.*)",
-      "dest": "api/app.js"
+      "dest": "app.js"
     }
   ]
 }
